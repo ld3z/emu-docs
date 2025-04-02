@@ -1,24 +1,23 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
-import vercel from "@astrojs/vercel";
-
 import icon from "astro-icon";
 
 export default defineConfig({
-  site: "https://createpak-docs.vercel.app",
+  site: 'https://ld3z.github.io',
+  base: 'emu-docs',
 
   integrations: [
     starlight({
-      title: "Createpak",
+      title: "Emu-Docs",
       customCss: [
         "./src/styles/custom.css",
         "@fontsource-variable/inter",
         "./src/styles/inline.css",
         "./src/styles/table.css",
       ],
-      social: { github: "https://github.com/ld3z/createpak-docs" },
-      logo: { src: "./src/assets/createpak_logo.webp", replacesTitle: true },
+      social: { github: "https://github.com/ld3z/emu-docs" },
+      logo: { src: "./src/assets/Deltalogo.png", replacesTitle: true },
       favicon: "/favicon.png",
       components: {
         Head: "./src/components/Head.astro",
@@ -26,6 +25,4 @@ export default defineConfig({
     }),
     icon(),
   ],
-
-  adapter: vercel(),
 });
