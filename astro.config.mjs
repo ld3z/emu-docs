@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-
+import AutoImport from 'astro-auto-import';
 import icon from "astro-icon";
 
 export default defineConfig({
@@ -22,6 +22,9 @@ export default defineConfig({
       components: {
         Head: "./src/components/Head.astro",
       },
+    }),
+    AutoImport({
+      imports: [{ 'astro-icon/components': 'icon' }],
     }),
     icon(),
   ],
