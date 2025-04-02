@@ -1,11 +1,11 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import AutoImport from 'astro-auto-import';
+
 import icon from "astro-icon";
 
 export default defineConfig({
-  site: 'https://ld3z.github.io',
-  base: 'emu-docs',
+  site: "https://ld3z.github.io",
+  base: "emu-docs",
 
   integrations: [
     starlight({
@@ -22,9 +22,6 @@ export default defineConfig({
       components: {
         Head: "./src/components/Head.astro",
       },
-    }),
-    AutoImport({
-      imports: [{ 'astro-icon/components': 'icon' }],
     }),
     icon(),
   ],
