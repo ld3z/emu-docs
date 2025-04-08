@@ -16,7 +16,7 @@ export default defineConfig({
         "./src/styles/inline.css",
         "./src/styles/table.css",
       ],
-      social: { github: "https://github.com/ld3z/emu-docs" },
+      social: { icon: 'github', label: 'GitHub', href: 'https://github.com/ld3z/emu-docs' },
       logo: { src: "./src/assets/Deltalogo.png", replacesTitle: true },
       favicon: "/favicon.png",
       components: {
