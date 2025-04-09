@@ -25,5 +25,11 @@
     "astro-og-canvas": "^0.7.0",
     "canvaskit-wasm": "^0.40.0",
     "sharp": "^0.34.1"
+  },
+  "devDependencies": {
+    "@unocss/astro": "^66.1.0-beta.10",
+    "@unocss/preset-icons": "^66.1.0-beta.10",
+    "@unocss/preset-uno": "^66.1.0-beta.10",
+    "unocss": "^66.1.0-beta.10"
   }
 }

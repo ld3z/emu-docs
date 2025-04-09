@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-
+import UnoCSS from "@unocss/astro";
 import icon from "astro-icon";
 
 export default defineConfig({
@@ -8,6 +8,7 @@ export default defineConfig({
   base: "emu-docs",
 
   integrations: [
+    UnoCSS(),
     starlight({
       title: "Emu-Docs",
       customCss: [
