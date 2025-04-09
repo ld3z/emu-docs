@@ -30,6 +30,7 @@
     "@unocss/astro": "^66.1.0-beta.10",
     "@unocss/preset-icons": "^66.1.0-beta.10",
     "@unocss/preset-uno": "^66.1.0-beta.10",
+    "unist-util-visit": "^5.0.0",
     "unocss": "^66.1.0-beta.10"
   }
 }

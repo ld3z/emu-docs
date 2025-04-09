@@ -2,13 +2,13 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import UnoCSS from "@unocss/astro";
 import icon from "astro-icon";
+import remarkIconShorthand from "./emojis.mjs";
 
 export default defineConfig({
   site: "https://ld3z.github.io",
   base: "emu-docs",
 
   integrations: [
-    UnoCSS(),
     starlight({
       title: "Emu-Docs",
       customCss: [
@@ -30,6 +30,11 @@ export default defineConfig({
         Head: "./src/components/Head.astro",
       },
     }),
+    UnoCSS(),
     icon(),
   ],
+
+  markdown: {
+    remarkPlugins: [remarkIconShorthand],
+  },
 });
