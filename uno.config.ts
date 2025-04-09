@@ -7,7 +7,7 @@ export default defineConfig({
     presetUno(), // Or your preferred base preset
     presetIcons({
       // Use the 'mask' mode for CSS-based icons
-      mode: 'mask', // Or 'background-img' if you prefer background images
+      mode: 'auto', // Or 'background-img' if you prefer background images
       // Optional: customize other options
       scale: 1.2, // Default icon size scaling
       warn: true, // Warn when icons requested are not found
