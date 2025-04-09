@@ -3,8 +3,6 @@ title: Online Multiplayer
 description: New in Delta 1.7
 ---
 
-import { Icon } from "astro-icon/components";
-
 Delta uses "community-hosted" Nintendo WFC servers to connect you with other players.
 
 ## How to Connect

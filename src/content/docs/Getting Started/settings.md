@@ -3,8 +3,6 @@ title: Settings
 description: Overview of the Settings in Delta
 ---
 
-import { Icon } from "astro-icon/components";
-
 You can access Delta's settings by tapping the icon in the top left of Delta's main screen.
 
 ![SettingsPg](../../../assets/settings.png)
