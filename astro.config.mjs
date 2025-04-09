@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import UnoCSS from "@unocss/astro";
-import icon from "astro-icon";
 import remarkIconShorthand from "./emojis.mjs";
 
 export default defineConfig({
@@ -31,7 +30,6 @@ export default defineConfig({
       },
     }),
     UnoCSS(),
-    icon(),
   ],
 
   markdown: {
