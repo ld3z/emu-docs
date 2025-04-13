@@ -1,0 +1,7 @@
+.starlight-custom-aside--example {
+    border: 1px solid #6124d4;
+    border-radius: 0.5rem;
+    background-color: #6624e0 !important;
+    --sl-color-asides-text-accent: #ffffff !important;
+    color:#ffffff !important;
+}

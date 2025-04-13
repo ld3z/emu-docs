@@ -1,0 +1,4 @@
+.starlight-custom-aside--question {
+    border: 1px solid var(--sl-color-green);
+    border-radius: 0.5rem;
+}
