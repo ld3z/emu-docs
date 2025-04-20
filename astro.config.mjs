@@ -5,8 +5,7 @@ import remarkIconShorthand from "./emojis.mjs";
 import starlightMarkdownBlocks, { Aside } from "starlight-markdown-blocks";
 
 export default defineConfig({
-  site: "https://ld3z.github.io",
-  base: "emu-docs",
+  site: "https://emu.ldez.top",
 
   integrations: [
     starlight({
