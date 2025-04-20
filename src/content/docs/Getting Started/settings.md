@@ -12,14 +12,14 @@ You can access Delta's settings by tapping the icon in the top left of Delta's m
 Here you can change which controller you would like to play with and customize the button mappings for each system
 
 :::note
-For more info on using controllers with Delta, see the [Controllers](/emu-docs/using-delta/controllers) page.
+For more info on using controllers with Delta, see the [Controllers](/using-delta/controllers) page.
 :::
 
 ## Controller Skins
 
 Here you can change the default controller skin for each system
 :::note
-For more info on using skins with Delta, see the [Controller Skins](/emu-docs/using-delta/controller-skins) page.
+For more info on using skins with Delta, see the [Controller Skins](/using-delta/controller-skins) page.
 :::
 
 ## Controller Opacity
