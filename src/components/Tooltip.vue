@@ -44,7 +44,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <span class="inline-flex items-center">
+  <span class="inline-flex items-center touch-manipulation" @touchstart.stop @touchend.stop>
     <button
       v-tooltip="{
         html: true,
@@ -63,10 +63,10 @@ onMounted(() => {
         theme: 'info-tooltip',
         autoHide: true,
         delay: { show: 100, hide: 0 },
-        triggers: ['hover', 'focus'],
+        triggers: ['hover', 'focus', 'click'],
       }"
       type="button"
-      class="w-7 h-7 rounded-full bg-[var(--sl-color-accent-low)] hover:bg-[var(--sl-color-accent-low)]/40 text-[var(--sl-color-text-accent)] border-[var(--sl-color-accent-low)] hover:border-[var(--sl-color-accent-high)] select-none border-2 border-solid font-bold transition-all duration-300 flex items-center justify-center"
+      class="w-7 h-7 rounded-full bg-[var(--sl-color-accent-low)] hover:bg-[var(--sl-color-accent-low)]/40 active:bg-[var(--sl-color-accent-low)]/60 text-[var(--sl-color-text-accent)] border-[var(--sl-color-accent-low)] hover:border-[var(--sl-color-accent-high)] select-none border-2 border-solid font-bold transition-all duration-300 flex items-center justify-center touch-manipulation"
       :aria-label="tooltipTitle"
     >
       <span :class="icon" class="text-base" />
@@ -75,9 +75,16 @@ onMounted(() => {
 </template>
 
 <style>
-/* Ensure the tooltip has proper z-index */
+/* Ensure the tooltip has proper z-index and works on mobile */
 .v-popper__popper {
   z-index: 9999 !important;
+  pointer-events: auto !important;
+}
+
+/* Prevent text selection on mobile when tapping the tooltip */
+.v-popper__inner {
+  user-select: text;
+  -webkit-user-select: text;
 }
 
 /* Style the tooltip content */
