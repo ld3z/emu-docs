@@ -61,7 +61,7 @@ onMounted(() => {
         shift: true,
         boundary: 'viewport',
         theme: 'info-tooltip',
-        autoHide: true,
+        autoHide: false,
         delay: { show: 0, hide: 0 },
         triggers: ['hover', 'focus', 'click'],
         popperTriggers: ['hover', 'focus', 'click'],
