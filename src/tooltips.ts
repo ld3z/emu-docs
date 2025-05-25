@@ -11,7 +11,7 @@ export interface Tooltips {
 export const tooltips: Tooltips = {
   'action-replay': {
     content: `
-Action Replay is a brand of cheat device.
+[Action Replay](https://en.wikipedia.org/wiki/Action_Replay) is a brand of cheat device.
 - Allows entering codes.
 - Modifies game memory.
     `,
