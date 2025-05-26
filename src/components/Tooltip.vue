@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, h } from 'vue';
+import { computed, onMounted, ref, h, onBeforeMount } from 'vue';
 import MarkdownIt from 'markdown-it';
 import { tooltips, type TooltipEntry } from '../tooltips';
 
@@ -16,6 +16,7 @@ const props = withDefaults(
 
 const md = new MarkdownIt();
 const tooltipData = ref<TooltipEntry | null>(null);
+const isMounted = ref(false);
 
 // Fetch tooltip data
 const fetchTooltipData = () => {
@@ -31,6 +32,7 @@ const tooltipTitle = computed<string>(() => {
 
 // Computed property for the HTML content of the tooltip
 const tooltipHtmlContent = computed<string>(() => {
+  if (!isMounted.value) return '';
   if (tooltipData.value?.content) {
     return md.render(tooltipData.value.content);
   }
@@ -38,13 +40,14 @@ const tooltipHtmlContent = computed<string>(() => {
 });
 
 // Initialize tooltip data when component mounts
-onMounted(() => {
+onBeforeMount(() => {
   fetchTooltipData();
+  isMounted.value = true;
 });
 </script>
 
 <template>
-  <span class="inline-flex items-center touch-manipulation" @touchstart.stop @touchend.stop>
+  <span class="inline-flex items-center touch-manipulation">
     <button
       v-tooltip="{
         html: true,
@@ -61,14 +64,12 @@ onMounted(() => {
         shift: true,
         boundary: 'viewport',
         theme: 'info-tooltip',
-        autoHide: true,
-        delay: { show: 0, hide: 0 },
-        triggers: ['hover', 'touch', 'click'],
-        popperTriggers: ['hover'],
+        // Let the global config handle triggers based on device
       }"
       type="button"
       class="w-7 h-7 rounded-full bg-[var(--sl-color-accent-low)] hover:bg-[var(--sl-color-accent-low)]/40 active:bg-[var(--sl-color-accent-low)]/60 text-[var(--sl-color-text-accent)] border-[var(--sl-color-accent-low)] hover:border-[var(--sl-color-accent-high)] select-none border-2 border-solid font-bold transition-all duration-300 flex items-center justify-center touch-manipulation"
       :aria-label="tooltipTitle"
+      @click.prevent
     >
       <span :class="icon" class="text-base" />
     </button>
@@ -76,19 +77,11 @@ onMounted(() => {
 </template>
 
 <style>
-/* Ensure the tooltip has proper z-index and works on mobile */
+/* Tooltip styles */
 .v-popper__popper {
   z-index: 9999 !important;
-  pointer-events: auto !important;
 }
 
-/* Prevent text selection on mobile when tapping the tooltip */
-.v-popper__inner {
-  user-select: text;
-  -webkit-user-select: text;
-}
-
-/* Style the tooltip content */
 .v-popper--theme-info-tooltip .v-popper__inner {
   background: var(--sl-color-bg);
   color: var(--sl-color-text);

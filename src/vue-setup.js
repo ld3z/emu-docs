@@ -15,8 +15,8 @@ export default (app) => {
       'info-tooltip': {
         $extend: 'tooltip',
         $resetCss: true,
-        triggers: ['hover', 'focus'],
-        hideTriggers: ['hover', 'click', 'touch'],
+        triggers: ['hover', 'click'],
+        hideTriggers: ['click'],
         autoHide: true,
         delay: {
           show: 100,
