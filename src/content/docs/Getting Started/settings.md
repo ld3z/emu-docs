@@ -30,6 +30,10 @@ This controls how translucent controller skins appear (if supported by the skin)
 
 This toggles haptic feedback on/off when pressing buttons or moving the control stick.
 
+## Context Menu Previews
+
+This toggles whether Delta will show a preview of a game or save state when long-pressing.
+
 ## Core Settings
 
 This is where you can access any system-specific settings, such as importing Nintendo DS BIOS files (which is no longer needed as of Delta 1.6).
