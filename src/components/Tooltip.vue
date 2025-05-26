@@ -63,7 +63,7 @@ onMounted(() => {
         theme: 'info-tooltip',
         autoHide: true,
         delay: { show: 0, hide: 0 },
-        triggers: ['hover', 'focus', 'click'],
+        triggers: ['hover', 'touch', 'click'],
         popperTriggers: ['hover'],
       }"
       type="button"
