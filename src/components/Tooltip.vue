@@ -61,10 +61,10 @@ onMounted(() => {
         shift: true,
         boundary: 'viewport',
         theme: 'info-tooltip',
-        autoHide: false,
+        autoHide: true,
         delay: { show: 0, hide: 0 },
         triggers: ['hover', 'focus', 'click'],
-        popperTriggers: ['hover', 'focus', 'click'],
+        popperTriggers: ['hover'],
       }"
       type="button"
       class="w-7 h-7 rounded-full bg-[var(--sl-color-accent-low)] hover:bg-[var(--sl-color-accent-low)]/40 active:bg-[var(--sl-color-accent-low)]/60 text-[var(--sl-color-text-accent)] border-[var(--sl-color-accent-low)] hover:border-[var(--sl-color-accent-high)] select-none border-2 border-solid font-bold transition-all duration-300 flex items-center justify-center touch-manipulation"
