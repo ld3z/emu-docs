@@ -18,6 +18,7 @@ For more info on using controllers with Delta, see the [Controllers](/using-delt
 ## Controller Skins
 
 Here you can change the default controller skin for each system
+
 :::note
 For more info on using skins with Delta, see the [Controller Skins](/using-delta/controller-skins) page.
 :::
@@ -33,6 +34,10 @@ This toggles haptic feedback on/off when pressing buttons or moving the control 
 ## Context Menu Previews
 
 This toggles whether Delta will show a preview of a game or save state when long-pressing.
+
+:::caution
+If Delta crashes when long-pressing a game or save state, toggle off Context Menu Previews to ensure the context menu still appears.
+:::
 
 ## Core Settings
 
