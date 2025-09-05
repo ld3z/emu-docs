@@ -14,27 +14,27 @@
     "@astrojs/starlight": "^0.35.2",
     "@astrojs/vue": "^5.1.0",
     "@fontsource-variable/inter": "^5.2.6",
-    "@iconify-json/arcticons": "^1.2.33",
+    "@iconify-json/arcticons": "^1.2.37",
     "@iconify-json/clarity": "^1.2.4",
     "@iconify-json/file-icons": "^1.2.2",
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/ri": "^1.2.5",
-    "@iconify-json/simple-icons": "^1.2.47",
+    "@iconify-json/simple-icons": "^1.2.50",
     "@iconify-json/streamline": "^1.2.5",
     "@iconify-json/teenyicons": "^1.2.2",
     "@iconify-json/twemoji": "^1.2.4",
-    "astro": "^5.13.2",
+    "astro": "^5.13.5",
     "floating-vue": "^5.2.2",
     "markdown-it": "^14.1.0",
     "sharp": "^0.34.3",
     "starlight-markdown-blocks": "^0.1.0",
-    "vue": "^3.5.18"
+    "vue": "^3.5.21"
   },
   "devDependencies": {
-    "@unocss/astro": "^66.4.2",
-    "@unocss/preset-icons": "^66.4.2",
-    "@unocss/preset-uno": "^66.4.2",
+    "@unocss/astro": "^66.5.0",
+    "@unocss/preset-icons": "^66.5.0",
+    "@unocss/preset-uno": "^66.5.0",
     "unist-util-visit": "^5.0.0",
-    "unocss": "^66.4.2"
+    "unocss": "^66.5.0"
   }
 }
