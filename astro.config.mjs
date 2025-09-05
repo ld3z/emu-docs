@@ -5,6 +5,7 @@ import remarkIconShorthand from "./emojis.mjs";
 import starlightMarkdownBlocks, { Aside } from "starlight-markdown-blocks";
 
 import vue from "@astrojs/vue";
+import starlightThemeGalaxy from 'starlight-theme-galaxy'
 
 export default defineConfig({
   site: "https://emu.ldez.top",
@@ -44,6 +45,7 @@ export default defineConfig({
             }),
           },
         }),
+        starlightThemeGalaxy()
       ],
     }),
     UnoCSS(),
@@ -54,5 +56,10 @@ export default defineConfig({
 
   markdown: {
     remarkPlugins: [remarkIconShorthand],
+  },
+  vite: {
+    ssr: {
+      noExternal: ["@fontsource-variable/inter"],
+    },
   },
 });
